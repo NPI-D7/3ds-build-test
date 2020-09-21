@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
 	gfxInitDefault();
 	consoleInit(GFX_TOP, NULL);
-
+//print
 	printf("Hello!\n");
 
 	// Main loop
