@@ -100,11 +100,11 @@ jobs:
           echo ::set-output name=current_date::$CURRENT_DATE
           git config --global user.email "nintenplayid7@gmail.com"
           git config --global user.name "Tobi-D7"
-          git clone --depth 1 https://${{ secrets.TWLBOT_TOKEN }}@github.com/NPXTobi/update-builds.git
-          mkdir -p update-builds/builds/Test/
-          cd update-builds/builds/Test/
-          qrencode -o Test.png https://github.com/NPXTobi/update-builds/raw/v$CURRENT_DATE/builds/Test/Test.cia
-          qrencode -o Test-release.png https://github.com/NPXTobi/Test/releases/download/$COMMIT_TAG/Test.cia
+          git clone --depth 1 https://${{ secrets.TOKEN }}@github.com/NPI-D7/nightlys.git
+          mkdir -p nightlys/builds/Test/
+          cd nightlys/builds/Test/
+          qrencode -o Test.png https://github.com/NPI-D7/nightlys/raw/v$CURRENT_DATE/builds/Test/Test.cia
+          qrencode -o Test-release.png https://github.com/NPI-D7/nightlys/releases/download/$COMMIT_TAG/Test.cia
           cp ${{ github.workspace }}/build/* .
           git stage .
           git commit -m "Test | $COMMIT_HASH"
@@ -114,7 +114,7 @@ jobs:
         run: |
           AUTH_HEADER="Authorization: token ${{ secrets.TOKEN }}"
           CONTENT_TYPE="Content-Type: application/json"
-          API_URL="https://api.github.com/repos/NPXTobi/update-builds/releases"
+          API_URL="https://api.github.com/repos/NPI-D7/nightlys/releases"
           RELEASE_INFO="{\"tag_name\": \"v${{ steps.commit.outputs.current_date }}\", \"name\": \"Test | $COMMIT_HASH\", \"body\": \"$AUTHOR_NAME - $COMMIT_MESSAGE\", \"prerelease\": true}"
           RESPONSE=$(curl -XPOST -H "$AUTH_HEADER" -H "$CONTENT_TYPE" "$API_URL" -d "$RELEASE_INFO")
           ID=$(echo $RESPONSE | jq --raw-output '.id')
@@ -122,7 +122,7 @@ jobs:
             AUTH_HEADER="Authorization: token ${{ secrets.TWLBOT_TOKEN }}"
             CONTENT_LENGTH="Content-Length: $(stat -c%s $file)"
             CONTENT_TYPE="Content-Type: application/7z-x-compressed"
-            UPLOAD_URL="https://uploads.github.com/repos/NPXTobi/update-builds/releases/$ID/assets?name=$(basename $file)"
+            UPLOAD_URL="https://uploads.github.com/repos/NPI-D7/nigtlys/releases/$ID/assets?name=$(basename $file)"
             curl -XPOST -H "$AUTH_HEADER" -H "$CONTENT_LENGTH" -H "$CONTENT_TYPE" --upload-file "$file" "$UPLOAD_URL"
           done
   
