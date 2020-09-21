@@ -119,7 +119,7 @@ jobs:
           RESPONSE=$(curl -XPOST -H "$AUTH_HEADER" -H "$CONTENT_TYPE" "$API_URL" -d "$RELEASE_INFO")
           ID=$(echo $RESPONSE | jq --raw-output '.id')
           for file in ${{ github.workspace }}/build/*; do
-            AUTH_HEADER="Authorization: token ${{ secrets.TWLBOT_TOKEN }}"
+            AUTH_HEADER="Authorization: token ${{ secrets.TOKEN }}"
             CONTENT_LENGTH="Content-Length: $(stat -c%s $file)"
             CONTENT_TYPE="Content-Type: application/7z-x-compressed"
             UPLOAD_URL="https://uploads.github.com/repos/NPI-D7/nigtlys/releases/$ID/assets?name=$(basename $file)"
