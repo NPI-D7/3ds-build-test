@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 	gfxInitDefault();
 	consoleInit(GFX_TOP, NULL);
 //print
-	printf("Hello!\n");
+	printf("Heellllo!\n");
 
 	// Main loop
 	while (aptMainLoop())
@@ -19,10 +19,14 @@ int main(int argc, char* argv[])
 
 		// Your code goes here
 		u32 kDown = hidKeysDown();
-		if (kDown & KEY_START)
+		if (kDown & KEY_START){
+			
 			break; // break in order to return to hbmenu
+			
 	}
+	
 
 	gfxExit();
 	return 0;
 }
+} 
