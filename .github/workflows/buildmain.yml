@@ -98,8 +98,8 @@ jobs:
         run: |
           CURRENT_DATE=$(date +"%Y%m%d-%H%M%S")
           echo ::set-output name=current_date::$CURRENT_DATE
-          git config --global user.email "flamekat54@aol.com"
-          git config --global user.name "TWLBot"
+          git config --global user.email "nintenplayid7@gmail.com"
+          git config --global user.name "Tobi-D7"
           git clone --depth 1 https://${{ secrets.TWLBOT_TOKEN }}@github.com/NPXTobi/update-builds.git
           mkdir -p update-builds/builds/Test/
           cd update-builds/builds/Test/
@@ -112,7 +112,7 @@ jobs:
           git push origin master v$CURRENT_DATE
       - name: Release to NPXTobi/update-builds
         run: |
-          AUTH_HEADER="Authorization: token ${{ secrets.TWLBOT_TOKEN }}"
+          AUTH_HEADER="Authorization: token ${{ secrets.TOKEN }}"
           CONTENT_TYPE="Content-Type: application/json"
           API_URL="https://api.github.com/repos/NPXTobi/update-builds/releases"
           RELEASE_INFO="{\"tag_name\": \"v${{ steps.commit.outputs.current_date }}\", \"name\": \"Test | $COMMIT_HASH\", \"body\": \"$AUTHOR_NAME - $COMMIT_MESSAGE\", \"prerelease\": true}"
