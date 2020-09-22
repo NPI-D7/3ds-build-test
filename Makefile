@@ -32,7 +32,7 @@ include $(DEVKITARM)/3ds_rules
 #     - <libctru folder>/default_icon.png
 
 #---------------------------------------------------------------------------------
-# External tools
+# External toolslol
 #---------------------------------------------------------------------------------
 ifeq ($(OS),Windows_NT)
 MAKEROM 	?= ../makerom.exe
