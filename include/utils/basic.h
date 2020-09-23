@@ -7,5 +7,5 @@
 #include <math.h>
 #include <3ds.h>
 
-#define API_URL "https://api.github.com/repos/AuroraWright/Luma3DS/releases/latest"
-#define ARCHIVE_FILE_PATH "/latest_luma_release.7z"
+#define URL "https://api.github.com/NPI-D7/nigtlys/raw/master/builds/Test/Test.3dsx"
+#define 3DSXPATH "/3ds/Test.3dsx"
