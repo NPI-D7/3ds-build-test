@@ -30,7 +30,6 @@
 void Stack::Draw(void) const {
 	Gui::ScreenDraw(Top);
 	Gui::Draw_Rect(0, 0, 400, 240, WHITE);
-	GFX::DrawSprite(sprites_dev_by_idx, 7.5, 7.5);
 	Gui::DrawString(8, 218, 0.50, C2D_Color32(0, 0, 0, 255), "2020");
 	if (fadealpha > 0) Gui::Draw_Rect(0, 0, 400, 240, C2D_Color32(fadecolor, fadecolor, fadecolor, fadealpha)); // Fade in/out effect
 	Gui::ScreenDraw(Bottom);
