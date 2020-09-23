@@ -28,7 +28,9 @@
 #include "init.hpp"
 #include "stack.hpp"
 #include "structs.hpp"
-#include "download.hpp"
+
+
+#include "download.h"
 
 bool exiting = false;
 
