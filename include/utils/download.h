@@ -10,5 +10,4 @@
 
 Result setupContext(httpcContext * context, const char * url, u32 * size);
 Result downloadToFile(const char * url, const char * filepath);
-Result downloadLatestRelease(const char * filepath);
 void downloadTest(void);
