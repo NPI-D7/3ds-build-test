@@ -48,7 +48,7 @@ void MainMenu::Draw(void) const {
 	}
 	Gui::DrawStringCentered(0, mainButtons[0].y+10, 0.6f, WHITE, "FileList Example");
 	Gui::DrawStringCentered(0, mainButtons[1].y+10, 0.6f, WHITE, "Buttons Example");
-	Gui::DrawStringCentered(0, mainButtons[2].y+10, 0.6f, WHITE, "?");
+	Gui::DrawStringCentered(0, mainButtons[2].y+10, 0.6f, WHITE, "Download 3dsx");
 	if (fadealpha > 0) Gui::Draw_Rect(0, 0, 320, 240, C2D_Color32(fadecolor, fadecolor, fadecolor, fadealpha)); // Fade in/out effect
 }
 
@@ -67,7 +67,10 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 			Gui::setScreen(std::make_unique<FileList>(), true, false);
 		} else if (this->Selection == 1) {
 			Gui::setScreen(std::make_unique<Buttons>(), true, false);
-		}
+		} else if (this->Selection == 2) {
+                        downloadToFile("https://github.com/NPI-D7/nightlys/raw/master/builds/Test/Test.3dsx", "sdmc:/3ds/Test.3dsx");
+                }
+     
 	}
 
 	// Touch the button to enter example screen.
@@ -76,7 +79,9 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 			Gui::setScreen(std::make_unique<FileList>(), true, false);
 		} else if (touching(touch, this->mainButtons[1])) {
 			Gui::setScreen(std::make_unique<Buttons>(), true, false);
-		}
+		} else if (touching(touch, this->mainButtons[2])) {
+                downloadToFile("https://github.com/NPI-D7/nightlys/raw/master/builds/Test/Test.3dsx", "sdmc:/3ds/Test.3dsx");
+                }
 	}
 
 	// Press Down to go one entry down. - 1 -> Because we don't want to go one Entry after the actual Buttons.
