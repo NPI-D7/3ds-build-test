@@ -24,16 +24,12 @@
 *         reasonable ways as different from the original version.
 */
 
-#ifndef INIT_HPP
-#define INIT_HPP
+#ifndef COMMON_HPP
+#define COMMON_HPP
 
-#include <3ds.h>
-
-namespace Init {
-	// Init, Mainloop & Exit.
-	Result Initialize();
-	Result MainLoop();
-	Result Exit();
-}
+// This is the new "screenCommon.hpp", lol.
+#include "gfx.hpp"
+#include "gui.hpp"
+#include "screenCommon.hpp"
 
 #endif
