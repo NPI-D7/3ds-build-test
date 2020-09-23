@@ -3,6 +3,10 @@
 #include "common.hpp"
 
 #include <curl/curl.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <vector>
+
 #define APP_TITLE Multiupdater
 
 enum DownloadError {
