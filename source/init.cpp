@@ -28,6 +28,7 @@
 #include "init.hpp"
 #include "stack.hpp"
 #include "structs.hpp"
+#include "download.hpp"
 
 bool exiting = false;
 
@@ -49,6 +50,7 @@ Result Init::Initialize() {
 	Gui::init();
 	Gui::loadSheet("romfs:/gfx/sprites.t3x", sprites);
 	cfguInit();
+        httpcInit(0);
 	osSetSpeedupEnable(true);	// Enable speed-up for New 3DS users
 	// We don't rely on older screens, so set false as the last param here.
 	Gui::setScreen(std::make_unique<Stack>(), false, false); // Set the screen initially as Stack Screen.
@@ -95,5 +97,6 @@ Result Init::Exit() {
 	gfxExit();
 	cfguExit();
 	romfsExit();
+        httpcExit();
 	return 0;
 }
