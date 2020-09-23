@@ -3,6 +3,7 @@
 #include "common.hpp"
 
 #include <curl/curl.h>
+#define APP_TITLE Multiupdater
 
 enum DownloadError {
 	DL_ERROR_NONE = 0,
