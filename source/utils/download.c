@@ -1,4 +1,4 @@
-#include "download.hpp"
+#include "download.h"
 
 #include "cybertrust.h"
 #include "digicert.h"
