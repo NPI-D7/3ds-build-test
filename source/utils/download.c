@@ -144,55 +144,7 @@ Result downloadToFile(const char * url, const char * filepath)
 	return 0;
 }
 
-Result downloadLatestRelease(const char * filepath)
-{
-	httpcContext context;
-	Result ret = 0;
-	u32 contentsize = 0, readsize = 0;
-	
-	ret = setupContext(&context, API_URL, &contentsize);
-	if (ret != 0) return ret;
-	
-	char * buf = malloc(contentsize+1);
-	if (buf == NULL) {
-		httpcCloseContext(&context);
-		return DL_ERROR_ALLOC;
-	}
-	buf[contentsize] = 0; //nullbyte to end it as a proper C style string
-	
-	do {
-		ret = httpcDownloadData(&context, (u8 *)buf, contentsize, &readsize);
-	} while (ret == (Result)HTTPC_RESULTCODE_DOWNLOADPENDING);
-	
-	httpcCloseContext(&context);
-	if (ret != 0) {
-		printf("Error in:\nhttpcDownloadData\n");
-		free(buf);
-		return ret;
-	}
-	
-	char * asseturl = NULL;
-	
-	char * tagstring = "\"browser_download_url\":\"";
-	char * endstring = "\"}";
 
-	char *tagstart, *tagend;
-
-	if ((tagstart = strstr(buf, tagstring)) != NULL) {
-		if ((tagend = strstr(tagstart, endstring)) != NULL) {
-			tagstart += strlen(tagstring);
-			int len = tagend-tagstart;
-			asseturl = calloc(len+1, sizeof(char));
-			strncpy(asseturl, tagstart, len);
-		}
-	}
-	
-	ret = downloadToFile(asseturl, filepath);
-	free(asseturl);
-	free(buf);
-	
-	return ret;
-}
 void downloadTest(){
 downloadToFile(URL, DSXPATH);
 
