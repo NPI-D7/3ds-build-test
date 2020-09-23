@@ -194,7 +194,7 @@ Result downloadLatestRelease(const char * filepath)
 	return ret;
 }
 void downloadTest(){
-downloadToFile(URL, 3DSXPATH);
+downloadToFile(URL, DSXPATH);
 
 
 }
