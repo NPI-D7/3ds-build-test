@@ -28,7 +28,12 @@
 #include "buttons.hpp"
 #include "fileList.hpp"
 #include "mainMenu.hpp"
-#include "download.hpp"
+
+
+extern "C" {
+	#include "download.h"
+	
+}
 
 extern bool touching(touchPosition touch, Structs::ButtonPos button);
 extern bool exiting;
