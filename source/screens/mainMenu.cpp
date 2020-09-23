@@ -75,7 +75,7 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 		} else if (this->Selection == 1) {
 			Gui::setScreen(std::make_unique<Buttons>(), true, false);
 		} else if (this->Selection == 2) {
-                        Msg::DiaplayMsg("Downloading...");
+                        Msg::DisplayMsg("Downloading...");
                         downloadTest();
                 }
      
@@ -88,7 +88,7 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 		} else if (touching(touch, this->mainButtons[1])) {
 			Gui::setScreen(std::make_unique<Buttons>(), true, false);
 		} else if (touching(touch, this->mainButtons[2])) {
-                Msg::DiaplayMsg("Downloading...");
+                Msg::DisplayMsg("Downloading...");
                 downloadTest();
                 }
 	}
