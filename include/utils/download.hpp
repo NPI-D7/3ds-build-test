@@ -2,6 +2,8 @@
 
 #include "common.hpp"
 
+#include <curl/curl.h>
+
 enum DownloadError {
 	DL_ERROR_NONE = 0,
 	DL_ERROR_WRITEFILE,
