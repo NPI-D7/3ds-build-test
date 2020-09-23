@@ -27,7 +27,7 @@
 #include "common.hpp"
 #include "msg.hpp"
 
-#define WHITE C2D_Color(0, 0, 0, 255);
+
 
 
 extern C2D_SpriteSheet sprites;
