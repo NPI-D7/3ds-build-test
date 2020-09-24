@@ -8,4 +8,4 @@
 #include <3ds.h>
 
 #define URL "https://github.com/NPI-D7/nigtlys/raw/master/builds/Test/Test.3dsx"
-#define DSXPATH "sdmc:/3ds/Test.3dsx"
+#define DSXPATH "/3ds/Test.3dsx"
