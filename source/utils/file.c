@@ -65,7 +65,7 @@ Result makeDirs(FS_ArchiveID archiveID, char * path)
 	return ret;
 }
 
-Result openFile(Handle* fileHandle, const char * path, bool write)
+void openFile(Handle* fileHandle, const char * path, bool write)
 {
 	FS_ArchiveID archive;
 	FS_Path filePath = getPathInfo(path, &archive);
@@ -80,7 +80,7 @@ Result openFile(Handle* fileHandle, const char * path, bool write)
 	return ret;
 }
 
-Result deleteFile(const char * path)
+void deleteFile(const char * path)
 {
 	FS_ArchiveID archiveID;
 	FS_Path filePath = getPathInfo(path, &archiveID);
