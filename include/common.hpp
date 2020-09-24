@@ -50,7 +50,7 @@ extern "C" {
 
 
 #include "json.hpp"
-
+#include "stringutils.hpp"
 
 
 
