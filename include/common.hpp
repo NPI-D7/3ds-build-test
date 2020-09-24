@@ -27,6 +27,29 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
+
+extern "C" {
+#endif
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdarg.h>
+
+
+#ifdef __cplusplus
+}
+
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <regex>
+#include <curl/curl.h>
+
+
+
+
 #define APP_TITLE "Test"
 
 // This is the new "screenCommon.hpp", lol.
