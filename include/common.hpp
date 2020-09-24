@@ -51,7 +51,7 @@ extern "C" {
 
 #include "json.hpp"
 
-
+using json = nlohmann::json;
 
 
 #define APP_TITLE "Test"
