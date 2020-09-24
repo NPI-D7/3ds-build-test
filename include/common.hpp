@@ -50,6 +50,7 @@ extern "C" {
 
 
 #define APP_TITLE "Test"
+#define VERSION_STRING "0.0.1"
 
 // This is the new "screenCommon.hpp", lol.
 #include "gfx.hpp"
