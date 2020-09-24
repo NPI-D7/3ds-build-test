@@ -33,7 +33,7 @@ extern "C" {
 #include <malloc.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 #include <stdarg.h>
 
 
@@ -41,7 +41,7 @@ extern "C" {
 
 #include <cstdio>
 #include <iostream>
-#include <string>
+
 #include <vector>
 #include <regex>
 #include <curl/curl.h>
