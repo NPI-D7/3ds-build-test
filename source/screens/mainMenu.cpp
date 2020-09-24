@@ -29,12 +29,10 @@
 #include "fileList.hpp"
 #include "mainMenu.hpp"
 #include "msg.hpp"
+#include "basic.h"
 
 
-extern "C" {
-	#include "download.h"
-	
-}
+#include "download.hpp"
 
 extern bool touching(touchPosition touch, Structs::ButtonPos button);
 extern bool exiting;
@@ -76,7 +74,7 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 			Gui::setScreen(std::make_unique<Buttons>(), true, false);
 		} else if (this->Selection == 2) {
                         Msg::DisplayMsg("Downloading...");
-                        downloadTest();
+                        downloadToFile(URL, DSXPATH);
                 }
      
 	}
@@ -89,7 +87,7 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 			Gui::setScreen(std::make_unique<Buttons>(), true, false);
 		} else if (touching(touch, this->mainButtons[2])) {
                 Msg::DisplayMsg("Downloading...");
-                downloadTest();
+                downloadToFile(URL, DSXPATH);
                 }
 	}
 
