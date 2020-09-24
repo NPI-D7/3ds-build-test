@@ -36,6 +36,7 @@ extern "C" {
 #include <string.h>
 #include <stdarg.h>
 
+#include <file.h>
 
 }
 
@@ -45,6 +46,10 @@ extern "C" {
 #include <vector>
 #include <regex>
 #include <curl/curl.h>
+
+
+
+#include "json.hpp"
 
 
 
