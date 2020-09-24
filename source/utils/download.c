@@ -1,4 +1,5 @@
 #include "download.h"
+#include "msg.hpp"
 
 #include "cybertrust.h"
 #include "digicert.h"
@@ -97,6 +98,7 @@ Result setupContext(httpcContext * context, const char * url, u32 * size)
 
 Result downloadToFile(const char * url, const char * filepath)
 {
+       
 	if (url == NULL) {
 		printf("Download cannot start, the URL is blank.\n");
 		return DL_ERROR_CONFIG;
@@ -111,6 +113,7 @@ Result downloadToFile(const char * url, const char * filepath)
 	ret = setupContext(&context, url, &contentsize);
 	if (ret != 0) return ret;
 	
+        Msg::DisplayMsg("Donloading...");
 	printf("Downloading %lu bytes...\n", contentsize);
 	
 	FILE * fh = fopen(filepath, "wb");
@@ -137,6 +140,7 @@ Result downloadToFile(const char * url, const char * filepath)
 	httpcCloseContext(&context);
 	
 	if (ret != 0) {
+               Msg::DisplayMsg("Error in:\nhttpcDownloadData");
 		printf("Error in:\nhttpcDownloadData\n");
 		return ret;
 	}
