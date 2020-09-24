@@ -272,7 +272,7 @@ $(OUTPUT).cia	:	$(OUTPUT).elf $(OUTPUT).smdh
 	@$(bin2o)
 
 #---------------------------------------------------------------------------------
-# rules for assembling GPU shaders
+# rules for assembling GPU shadersj
 #---------------------------------------------------------------------------------
 define shader-as
 	$(eval CURBIN := $*.shbin)
