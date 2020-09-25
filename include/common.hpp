@@ -1,4 +1,4 @@
-/*
+/*h
 *   This file is part of Universal-Core-Example
 *   Copyright (C) 2020 SuperSaiyajinStackie
 *
@@ -41,7 +41,7 @@ extern "C" {
 
 }
 
-#include <csdtio>
+#include <cstdio>
 #include <iostream>
 
 #include <vector>
