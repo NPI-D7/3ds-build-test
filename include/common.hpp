@@ -27,6 +27,7 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
+#include <3ds.h>
 
 extern "C" {
 
@@ -40,14 +41,14 @@ extern "C" {
 
 }
 
-
+#include <csdtio>
 #include <iostream>
 
 #include <vector>
 #include <regex>
 #include <curl/curl.h>
 
-
+//Lol
 
 
 #include "json.hpp"
