@@ -48,6 +48,7 @@ extern "C" {
 #include <curl/curl.h>
 
 
+using json = nlohmann::json;
 
 #include "json.hpp"
 #include "stringutils.hpp"
