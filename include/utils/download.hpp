@@ -11,4 +11,3 @@ enum DownloadError {
 };
 
 Result downloadToFile(std::string url, std::string path);
-Result downloadFromRelease(std::string url, std::string asset, std::string path);
