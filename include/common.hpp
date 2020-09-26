@@ -36,7 +36,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "files.h"
+#include "file.h"
 
 #include <malloc.h>
 #include <stdio.h>
