@@ -1,4 +1,5 @@
 #include "download.hpp"
+#include <3ds.h>
 
 #define  USER_AGENT   APP_TITLE "-" VERSION_STRING
 
