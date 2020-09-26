@@ -58,7 +58,11 @@ extern "C" {
 #include "json.hpp"
 #include "stringutils.hpp"
 
+using json = nlohmann::json;
 
+
+
+extern char * arg0;
 
 #define APP_TITLE "Test"
 #define VERSION_STRING "0.0.1"
