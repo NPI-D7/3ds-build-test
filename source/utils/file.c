@@ -1,4 +1,5 @@
 #include "file.h"
+#include "common.hpp"
 
 FS_Path getPathInfo(const char * path, FS_ArchiveID * archive) {
 	*archive = ARCHIVE_SDMC;
