@@ -24,8 +24,7 @@
 *         reasonable ways as different from the original version.
 */
 
-#ifndef COMMON_HPP
-#define COMMON_HPP
+
 
 
 
