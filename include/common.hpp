@@ -27,9 +27,16 @@
 #ifndef COMMON_HPP
 #define COMMON_HPP
 
+
+
+#pragma once
+
 #include <3ds.h>
 
+#ifdef __cplusplus
 extern "C" {
+#endif
+#include "files.h"
 
 #include <malloc.h>
 #include <stdio.h>
@@ -37,10 +44,8 @@ extern "C" {
 #include <string.h>
 #include <stdarg.h>
 
-#include "file.h"
-
+#ifdef __cplusplus
 }
-
 #include <cstdio>
 #include <iostream>
 
