@@ -5,6 +5,8 @@
 #include "fs.h"
 #include "net.h"
 #include "utils.h"
+#include "common.hpp"
+
 
 #define  USER_AGENT APP_TITLE
 
