@@ -26,7 +26,7 @@
 
 #include "mainMenu.hpp"
 #include "stack.hpp"
-#imclude "screenshot.hpp"
+#include "screenshot.hpp"
 
 void Stack::Draw(void) const {
 	Gui::ScreenDraw(Top);
