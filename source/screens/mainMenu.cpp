@@ -32,7 +32,7 @@
 #include "basic.h"
 
 
-#include "net.h"
+
 
 extern bool touching(touchPosition touch, Structs::ButtonPos button);
 extern bool exiting;
