@@ -71,7 +71,7 @@ Result Init::Initialize() {
 	FS_OpenArchive(&nand_archive, ARCHIVE_NAND_CTR_FS);
 	archive = sdmc_archive;
 
-	FS_RecursiveMakeDir(archive, "/3ds/NPI/");
+	FS_RecursiveMakeDir(archive, "/3ds/NPI/screenshots/Test/");
 	
 	
 
