@@ -1,4 +1,4 @@
-#include "music/playback.h"
+#include "playback.h"
 
 #include <tremor/ivorbiscodec.h>
 #include <tremor/ivorbisfile.h>
