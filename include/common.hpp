@@ -39,6 +39,7 @@ extern "C" {
 #include "screenshot.h"
 #include "fs.h"
 #include "utils.h"
+#include "playback"
 
 #include <malloc.h>
 #include <stdio.h>
