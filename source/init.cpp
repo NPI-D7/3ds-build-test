@@ -53,7 +53,7 @@ Result Init::Initialize() {
 	Gui::loadSheet("romfs:/gfx/sprites.t3x", sprites);
 	cfguInit();
         
-        changeFile("sdmc:/3ds/NPI/music/Test/Faint.mp3", 1);
+        changeFile(void*"sdmc:/3ds/NPI/music/Test/Faint.mp3", 1);
 
         acInit();
 	amInit();
