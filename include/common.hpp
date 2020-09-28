@@ -37,6 +37,8 @@ extern "C" {
 #endif
 #include "file.h"
 #include "screenshot.h"
+#include "fs.h"
+#include "utils.h"
 
 #include <malloc.h>
 #include <stdio.h>
