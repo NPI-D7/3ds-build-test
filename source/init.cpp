@@ -53,6 +53,33 @@ Result Init::Initialize() {
 	Gui::loadSheet("romfs:/gfx/sprites.t3x", sprites);
 	cfguInit();
         
+
+        acInit();
+	amInit();
+	AM_QueryAvailableExternalTitleDatabase(NULL);
+	mcuHwcInit();
+	ptmuInit();
+	
+	
+	
+
+	APT_GetAppCpuTimeLimit(&cpu_time_limit);
+	APT_SetAppCpuTimeLimit(30);
+
+	
+	
+	FS_OpenArchive(&sdmc_archive, ARCHIVE_SDMC);
+	FS_OpenArchive(&nand_archive, ARCHIVE_NAND_CTR_FS);
+	archive = sdmc_archive;
+
+	FS_RecursiveMakeDir(archive, "/3ds/NPI/");
+	
+	
+
+
+
+
+
 	osSetSpeedupEnable(true);	// Enable speed-up for New 3DS users
 	// We don't rely on older screens, so set false as the last param here.
 	Gui::setScreen(std::make_unique<Stack>(), false, false); // Set the screen initially as Stack Screen.
@@ -71,6 +98,11 @@ Result Init::MainLoop() {
 		u32 hHeld = hidKeysHeld();
 		touchPosition touch;
 		hidTouchRead(&touch);
+
+
+
+
+
 
 		Gui::clearTextBufs(); // Clear Text Buffer before.
 		C2D_TargetClear(Top, C2D_Color32(0, 0, 0, 0));
