@@ -1,5 +1,5 @@
-#include "music/playback.h"
-#include "music/wav.h"
+#include "playback.h"
+#include "wav.h"
 
 #include <stdio.h>
 #include <stdlib.h>
