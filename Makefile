@@ -74,7 +74,7 @@ endif
 
 #---------------------------------------------------------------------------------
 TARGET		:=	Test
-APP_TITLE       :=      MultiUpdater
+
 BUILD		:=	build
 UNIVCORE	:= 	Universal-Core
 MUSIC		:=  music
