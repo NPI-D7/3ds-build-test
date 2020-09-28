@@ -99,6 +99,19 @@ Result Init::Exit() {
 	gfxExit();
 	cfguExit();
 	romfsExit();
+
+
+FS_CloseArchive(nand_archive);
+	FS_CloseArchive(sdmc_archive);
+
+	
+	
+	
+	ptmuExit();
+	mcuHwcExit();
+	amExit();
+	acExit();
+
         
 	return 0;
 }
