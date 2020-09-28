@@ -72,7 +72,8 @@ Result Init::Initialize() {
 	archive = sdmc_archive;
 
 	FS_RecursiveMakeDir(archive, "/3ds/NPI/screenshots/Test/");
-	
+        
+	FS_RecursiveMakeDir(archive, "/3ds/NPI/music/Test/");
 	
 
 
