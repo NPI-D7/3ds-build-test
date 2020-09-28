@@ -63,8 +63,7 @@ Result Init::Initialize() {
 	
 	
 
-	APT_GetAppCpuTimeLimit(&cpu_time_limit);
-	APT_SetAppCpuTimeLimit(30);
+	
 
 	
 	
