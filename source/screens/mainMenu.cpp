@@ -30,6 +30,7 @@
 #include "mainMenu.hpp"
 #include "msg.hpp"
 #include "basic.h"
+#include "screenshot.h"
 
 
 
@@ -90,7 +91,9 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
                 
                 }
 	}
-
+        if (hDown & KEY_L) {
+        Screenshot_Capture();
+        }
 	// Press Down to go one entry down. - 1 -> Because we don't want to go one Entry after the actual Buttons.
 	if (hDown & KEY_DOWN) {
 		if (this->Selection < (int)this->mainButtons.size() - 1)	this->Selection++;
