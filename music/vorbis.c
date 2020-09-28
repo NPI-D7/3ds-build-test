@@ -1,5 +1,5 @@
-#include "music/vorbis.h"
-#include "music/playback.h"
+#include "vorbis.h"
+#include "playback.h"
 
 #include <stdio.h>
 #include <stdlib.h>
