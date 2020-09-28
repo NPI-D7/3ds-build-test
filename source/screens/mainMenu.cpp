@@ -30,7 +30,7 @@
 #include "mainMenu.hpp"
 #include "msg.hpp"
 #include "basic.h"
-#include "screenshot.h"
+#include "common.hpp"
 
 
 
