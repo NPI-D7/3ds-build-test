@@ -8,7 +8,7 @@
 #include "common.hpp"
 
 
-#define  USER_AGENT APP_TITLE
+#define  USER_AGENT TARGET
 
 static char *result_buf = NULL;
 static size_t result_sz = 0;
