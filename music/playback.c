@@ -1,12 +1,12 @@
-#include "music/all.h"
-#include "music/error.h"
-#include "music/file.h"
-#include "music/flac.h"
-#include "music/mp3.h"
-#include "music/opus.h"
-#include "music/playback.h"
-#include "music/vorbis.h"
-#include "music/wav.h"
+#include "all.h"
+#include "error.h"
+#include "file.h"
+#include "flac.h"
+#include "mp3.h"
+#include "opus.h"
+#include "playback.h"
+#include "vorbis.h"
+#include "wav.h"
 
 #include <stdbool.h>
 #include <stdlib.h>
