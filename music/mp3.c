@@ -1,5 +1,5 @@
-#include "music/mp3.h"
-#include "music/playback.h"
+#include "mp3.h"
+#include "playback.h"
 
 #include <mpg123.h>
 #include <stdio.h>
