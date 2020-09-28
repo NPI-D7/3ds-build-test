@@ -1,4 +1,4 @@
-#include "music/playback.h"
+#include "playback.h"
 
 /**
  * Set decoder parameters for flac.
