@@ -6,7 +6,7 @@
 #include <citro2d.h>
 
 
-#define WHITE         C2D_Color32(255, 255, 255, 255)
+#define CWHITE         C2D_Color32(255, 255, 255, 255)
 
 typedef u32 Colour;
 extern C2D_Font font;
