@@ -2,7 +2,7 @@
 #define _CMSG_H
 
 
-#include <3ds.h>
+
 #include <citro2d.h>
 
 
