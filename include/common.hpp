@@ -40,6 +40,7 @@ extern "C" {
 #include "fs.h"
 #include "utils.h"
 #include "playback.h"
+#include "cmsg.h"
 
 #include <malloc.h>
 #include <stdio.h>
@@ -76,6 +77,9 @@ extern char * arg0;
 #include "gui.hpp"
 #include "screenCommon.hpp"
 
+
+
+#define WHITE         C2D_Color32(255, 255, 255, 255)
 #define WORKING_DIR	"/"
 #define SCRIPTS_PATH	"sdmc:/3ds/Universal-Updater/scripts/" // The Scripts will be here.
 #define MUSIC_PATH	"sdmc:/3ds/Universal-Updater/Music.wav" // Default Music File / Path.

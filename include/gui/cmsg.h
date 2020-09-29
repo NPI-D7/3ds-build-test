@@ -3,4 +3,4 @@
 #include <citro3d.h>
 
 
-CMSG_DrawMSG();
+CMSG_DrawMSG(float x, float y, float size, Colour colour, const char *text);
