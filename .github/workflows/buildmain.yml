@@ -143,7 +143,7 @@ jobs:
         run: |
           curl -o send.sh https://raw.githubusercontent.com/NPI-D7/discord-webhooks/master/send-ghactions.sh
           chmod +x send.sh
-          export IMAGE=https://raw.githubusercontent.com/NPI-D7/nigtlys/v$CURRENT_DATE/builds/Test/Test-Release.png
+          export IMAGE=https://raw.githubusercontent.com/NPI-D7/nigtlys/v$CURRENT_DATE/builds/Test/Test.png
           ./send.sh success ${{ secrets.WEBHOOK_URL }}
       - name: Send failure webhook
         if: ${{ failure() }}
