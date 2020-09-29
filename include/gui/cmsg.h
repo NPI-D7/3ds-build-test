@@ -10,12 +10,11 @@ typedef u32 Colour;
 extern C2D_Font font;
 extern C2D_TextBuf c2d_static_buf, c2d_dynamic_buf, c2d_size_buf;
 
-class CMSG {
-
-DrawMSG(float x, float y, float size, Colour color, const char *text);
 
 
-};
+void DrawMSG(float x, float y, float size, Colour color, const char *text);
+
+
 
 
 

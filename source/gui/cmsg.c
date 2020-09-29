@@ -1,6 +1,6 @@
 #include "cmsg.h"
 
-DrawMSG(float x, float y, float size, Colour color, const char *text)
+void DrawMSG(float x, float y, float size, Colour color, const char *text)
 {
     C2D_Text c2d_text;
 	C2D_TextFontParse(&c2d_text, font, c2d_dynamic_buf, text);
