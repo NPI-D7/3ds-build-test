@@ -1,3 +1,6 @@
+#include <assert.h>
+#include <stdarg.h>
+
 #include "cmsg.h"
 
 void DrawMSG(float x, float y, float size, Colour color, const char *text)
