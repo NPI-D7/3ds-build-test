@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-//#include "msg.hpp"
+#include "msg.hpp"
 #include "common.hpp"
 #include "fs.h"
 
-#include "cmsg.h"
+
 
 #include "screenshot.h"
 
@@ -109,6 +109,5 @@ void Screenshot_Capture(void) {
 
 	Screenshot_GenerateScreenshot(file_name);
 	num++;
-	DrawMSG(10, 210, 2, CWHITE, "Screenshot Generated:");
-       // Msg::DisplayMsg("Screnshot generated...");
+	Msg::DisplayMsg("Screnshot generated...");
 }
