@@ -1,3 +1,6 @@
+#include <citro2d.h>
+
+
 #include <assert.h>
 #include <stdarg.h>
 
