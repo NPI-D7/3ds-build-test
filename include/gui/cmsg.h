@@ -9,7 +9,7 @@
 #define CWHITE         C2D_Color32(255, 255, 255, 255)
 
 
-void DrawMSG(float x, float y, float size, u32 Colour, const char *text);
+void DrawMSG(float x, float y, float size, u32 Colour, const char *text, C2D_Font fnt);
 
 
 
