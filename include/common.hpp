@@ -35,7 +35,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "file.h"
+
 #include "screenshot.h"
 #include "fs.h"
 #include "utils.h"
