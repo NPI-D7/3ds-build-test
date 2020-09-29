@@ -12,7 +12,7 @@ extern C2D_TextBuf c2d_static_buf, c2d_dynamic_buf, c2d_size_buf;
 
 
 
-CMSG_DrawMSG(float x, float y, float size, Colour color, const char *text);
+DrawMSG(float x, float y, float size, Colour color, const char *text);
 
 
 
