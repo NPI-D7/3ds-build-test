@@ -109,6 +109,6 @@ void Screenshot_Capture(void) {
 
 	Screenshot_GenerateScreenshot(file_name);
 	num++;
-	DrawMSG(10, 210, 2, WHITE, "Screenshot Generated:", file_name);
+	DrawMSG(10, 210, 2, CWHITE, "Screenshot Generated:", file_name);
        // Msg::DisplayMsg("Screnshot generated...");
 }
