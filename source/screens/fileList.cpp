@@ -26,6 +26,7 @@
 
 #include "fileList.hpp"
 #include "mainMenu.hpp"
+#include "common.hpp"
 
 extern bool touching(touchPosition touch, Structs::ButtonPos button);
 
@@ -60,7 +61,10 @@ void FileList::Draw(void) const {
 
 
 void FileList::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
-	if (hDown & KEY_B) {
+	if (hDown & KEY_L) {
+        Screenshot_Capture();
+        }
+        if (hDown & KEY_B) {
 		Gui::setScreen(std::make_unique<MainMenu>(), true, false);
 	}
 
