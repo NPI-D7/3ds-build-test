@@ -7,6 +7,8 @@
 #include "common.hpp"
 #include "fs.h"
 
+#include "cmsg.h"
+
 #include "screenshot.h"
 
 static Result Screenshot_GenerateScreenshot(const char *path) {
