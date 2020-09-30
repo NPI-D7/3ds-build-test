@@ -7,7 +7,7 @@
 #include "flac.h"
 #include "mp3.h"
 #include "ogg.h"
-#include "audio/opus.h"
+
 #include "wav.h"
 #include "xm.h"
 
