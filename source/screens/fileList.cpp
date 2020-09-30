@@ -61,9 +61,9 @@ void FileList::Draw(void) const {
 
 
 void FileList::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
-	if (hDown & KEY_L) {
-        Screenshot_Capture();
-        }
+	//if (hDown & KEY_L) {
+     //   Screenshot_Capture();
+     //   }
         if (hDown & KEY_B) {
 		Gui::setScreen(std::make_unique<MainMenu>(), true, false);
 	}
