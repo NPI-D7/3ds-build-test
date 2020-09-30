@@ -97,10 +97,11 @@ RSF_FILE	:=	app/build-cia.rsf
 #---------------------------------------------------------------------------------
 ARCH	:=	-march=armv6k -mtune=mpcore -mfloat-abi=hard -mtp=soft
 
-CFLAGS	:=	-g -Wall -Wno-psabi -O2 -mword-relocations \
-			-DV_STRING=\"$(GIT_VER)\" \
-			-fomit-frame-pointer -ffunction-sections \
-			$(ARCH)
+CFLAGS	:=	-g -Wall -O3 -mword-relocations \
+		-fomit-frame-pointer -ffast-math \
+		-I$(DEVKITPRO)/portlibs/3ds/include/opus \
+		
+		$(ARCH)
 
 CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS -D_GNU_SOURCE=1
 
