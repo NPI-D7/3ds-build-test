@@ -1,3 +1,4 @@
+/*
 #include <3ds.h>
 
 
@@ -111,3 +112,4 @@ void Screenshot_Capture(void) {
 	//Draw_Text(5, 230, 2.5, CWHITE, "Screenshot generated!");
 	//Msg::DisplayMsg("Screnshot generated...");
 }
+*\
