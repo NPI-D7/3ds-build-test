@@ -78,9 +78,9 @@ MUSIC       :=  music
 BUILD		:=	build
 UNIVCORE	:= 	Universal-Core
 MUSIC		:=  ZDS
-SOURCES		:= $(UNIVCORE) $(MUSIC) source source/gui source/screens source/core/management source/utils source/core/management/nand
+SOURCES		:= $(UNIVCORE) $(MUSIC) libs/source source source/gui source/screens source/core/management source/utils source/core/management/nand
 DATA		:=	data
-INCLUDES	:= $(UNIVCORE) $(MUSIC) include include/gui include/screens include/core/management include/utils include/core/management/nand
+INCLUDES	:= $(UNIVCORE) $(MUSIC) libs/include include include/gui include/screens include/core/management include/utils include/core/management/nand
 GRAPHICS	:=	assets/gfx
 #GFXBUILD	:=	$(BUILD)
 ROMFS		:=	romfs
@@ -116,7 +116,7 @@ LIBS	:= -lcurl -lmbedtls -lmbedx509 -lmbedcrypto -larchive -lbz2 -llzma -lz \
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:= $(PORTLIBS) $(CTRULIB)
+LIBDIRS	:= $(PORTLIBS) $(CTRULIB) $(CURDIR)/libs
 
 
 #---------------------------------------------------------------------------------
