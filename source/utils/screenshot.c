@@ -3,6 +3,7 @@
 
 //#include "msg.hpp"
 #include "common.hpp"
+#include "dialog.h"
 
 
 
@@ -107,5 +108,6 @@ void Screenshot_Capture(void) {
 
 	Screenshot_GenerateScreenshot(file_name);
 	num++;
+	Dialog_DisplayMessage("Finished!", "Screenshot generatet at:", file_name);
 	//Msg::DisplayMsg("Screnshot generated...");
 }
