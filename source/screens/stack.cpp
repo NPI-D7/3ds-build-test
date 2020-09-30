@@ -46,7 +46,7 @@ void Stack::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 	if (this->delay > 130) {
 		Gui::setScreen(std::make_unique<MainMenu>(), true, false);
 	}
-        if (hDown & KEY_L) {
-        Screenshot_Capture();
-        }
+     //   if (hDown & KEY_L) {
+       // Screenshot_Capture();
+     //   }
 }
