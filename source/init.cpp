@@ -101,6 +101,8 @@ Result Init::MainLoop() {
 		hidTouchRead(&touch);
 
 
+		Audio_Init("sdmc:/3ds/NPI/music/Test/Faint.mp3");
+
              //   playFile("/3ds/NPI/music/Test/Faint.mp3");
 
 
