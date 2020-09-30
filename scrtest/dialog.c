@@ -3,7 +3,7 @@
 #include "common.hpp"
 
 #include "C2D_helper.h"
-#include "textures.h"
+
 
 
 static void Dialog_DisplayBoxAndMsg(const char *title, const char *msg_1, const char *msg_2, float msg_1_width, float msg_2_width) {
