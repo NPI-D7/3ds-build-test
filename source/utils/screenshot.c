@@ -3,8 +3,8 @@
 
 //#include "msg.hpp"
 #include "common.hpp"
-#include "dialog.h"
 
+#include "C2D_helper.h"
 
 
 
@@ -108,6 +108,6 @@ void Screenshot_Capture(void) {
 
 	Screenshot_GenerateScreenshot(file_name);
 	num++;
-	Dialog_DisplayMessage("Finished!", "Screenshot generatet at:", file_name);
+	Draw_Text(5, 230, 2.5, CWHITE, "Screenshot generated!")
 	//Msg::DisplayMsg("Screnshot generated...");
 }
