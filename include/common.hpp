@@ -36,7 +36,7 @@
 extern "C" {
 #endif
 
-#include "screenshot.h"
+//#include "screenshot.h"
 #include "fs.h"
 #include "utils.h"
 
