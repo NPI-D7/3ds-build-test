@@ -20,7 +20,7 @@ enum Audio_FileType {
 	FILE_TYPE_FLAC = 1,
 	FILE_TYPE_MP3 = 2,
 	
-	FILE_TYPE_OPUS = 4,
+
 	FILE_TYPE_WAV = 5,
 	
 };
@@ -38,11 +38,6 @@ static u32 Audio_GetSampleRate(void) {
 		case FILE_TYPE_MP3:
 			sample_rate = MP3_GetSampleRate();
 			break;
-
-		case FILE_TYPE_OGG:
-			sample_rate = OGG_GetSampleRate();
-			break;
-
 
 
 		case FILE_TYPE_WAV:
@@ -70,10 +65,8 @@ static u8 Audio_GetChannels(void) {
 			channels = MP3_GetChannels();
 			break;
 
-		case FILE_TYPE_OGG:
-			channels = OGG_GetChannels();
-			break;
-
+	
+	
 
 		case FILE_TYPE_WAV:
 			channels = WAV_GetChannels();
@@ -97,9 +90,6 @@ void Audio_Callback(void *userdata, void *stream, int length) {
 			MP3_Decode(stream, length / (Audio_GetChannels() * sizeof(s16)), userdata);
 			break;
 
-		case FILE_TYPE_OGG:
-			OGG_Decode(stream, length / (Audio_GetChannels() * sizeof(s16)), userdata);
-			break;
 
 		
 
@@ -130,8 +120,7 @@ void Audio_Init(const char *path) {
 		file_type = FILE_TYPE_FLAC;
 	else if (!strncasecmp(Audio_GetFileExt(path), "mp3", 3))
 		file_type = FILE_TYPE_MP3;
-	else if (!strncasecmp(Audio_GetFileExt(path), "ogg", 3))
-		file_type = FILE_TYPE_OGG;
+
 
 	else if (!strncasecmp(Audio_GetFileExt(path), "wav", 3))
 		file_type = FILE_TYPE_WAV;
@@ -147,11 +136,6 @@ void Audio_Init(const char *path) {
 
 		case FILE_TYPE_MP3:
 			MP3_Init(path);
-			samples = 4096;
-			break;
-
-		case FILE_TYPE_OGG:
-			OGG_Init(path);
 			samples = 4096;
 			break;
 
@@ -196,10 +180,7 @@ u64 Audio_GetPosition(void) {
 			position = MP3_GetPosition();
 			break;
 
-		case FILE_TYPE_OGG:
-			position = OGG_GetPosition();
-			break;
-
+		
 	
 
 		case FILE_TYPE_WAV:
@@ -227,10 +208,7 @@ u64 Audio_GetLength(void) {
 			length = MP3_GetLength();
 			break;
 
-		case FILE_TYPE_OGG:
-			length = OGG_GetLength();
-			break;
-
+		
 
 		case FILE_TYPE_WAV:
 			length = WAV_GetLength();
@@ -263,9 +241,7 @@ void Audio_Term(void) {
 			MP3_Term();
 			break;
 
-		case FILE_TYPE_OGG:
-			OGG_Term();
-			break;
+	
 
 
 
