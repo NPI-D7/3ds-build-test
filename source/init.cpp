@@ -65,7 +65,7 @@ Result Init::Initialize() {
 	
 	while (FS_FileExists(sdmc_archive, "/3ds/NPI/music/Test/Faint.mp3"))
 	{
-		Audio_Init("/3ds/NPI/music/Test/Faint.mp3");
+		Audio_Init("sdmc:/3ds/NPI/music/Test/Faint.mp3");
 	}
 	
 	
