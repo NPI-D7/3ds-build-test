@@ -67,7 +67,7 @@ void FileList::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
         if (hDown & KEY_B) {
 		Gui::setScreen(std::make_unique<MainMenu>(), true, false);
 	}
-	if (kDown & KEY_A){
+	if (hDown & KEY_A){
 		if (this->Selection == 0){
 			Audio_Init("sdmc:/3ds/NPI/music/Test/Faint.mp3");
 		}
