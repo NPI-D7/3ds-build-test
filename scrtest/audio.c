@@ -90,7 +90,7 @@ void Audio_Init(const char *path) {
 	playing = true;
 
 	
-	else if (!strncasecmp(Audio_GetFileExt(path), "mp3", 3))
+	 if (!strncasecmp(Audio_GetFileExt(path), "mp3", 3))
 		file_type = FILE_TYPE_MP3;
 	
 
