@@ -66,7 +66,9 @@ void MainMenu::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 		fadeout = true;
 		exiting = true;
 	}
-        
+    if (hDown & KEY_R){
+		Audio_Init("sdmc:/3ds/NPI/music/Test/Faint.mp3");
+	}
 
 	// Press <A> on a Button to enter example screen.
 	if (hDown & KEY_A) {
