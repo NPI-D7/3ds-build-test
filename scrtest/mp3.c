@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include "audio.h"
-#include "C2D_helper.h"
+
 
 static mpg123_handle *mp3;
 static u64 frames_read = 0, total_samples = 0;
@@ -159,7 +159,7 @@ int MP3_Init(const char *path) {
 
 				if ((pic->type == 3 ) || (pic->type == 0)) {
 					if ((!strcasecmp(str, "image/jpg")) || (!strcasecmp(str, "image/jpeg")) || (!strcasecmp(str, "image/png"))) {
-						Draw_LoadImageMemory(&metadata.cover_image, pic->data, pic->size);
+					
 						break;
 					}
 				}
