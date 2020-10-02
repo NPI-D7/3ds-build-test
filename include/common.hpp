@@ -40,8 +40,7 @@ extern "C" {
 #include "fs.h"
 #include "utils.h"
 
-#include "3dsaudiolib.h"
-#include "audio.h"
+
 
 #include <malloc.h>
 #include <stdio.h>

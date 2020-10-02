@@ -28,6 +28,7 @@
 #include "init.hpp"
 #include "stack.hpp"
 #include "structs.hpp"
+#include "sound.hpp"
 
 
 
@@ -53,7 +54,7 @@ Result Init::Initialize() {
 	Gui::loadSheet("romfs:/gfx/sprites.t3x", sprites);
 	cfguInit();
         
-        
+    mp3::PlayFile("/3ds/NPI/music/Test/Faint.mp3");
 
         acInit();
 	amInit();
