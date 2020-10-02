@@ -104,7 +104,7 @@ Result Init::MainLoop() {
 
 	
 		
-		mp3::PlayFile();
+		//mp3::PlayFile();
              //   playFile("/3ds/NPI/music/Test/Faint.mp3");
 
 
