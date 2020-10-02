@@ -13,7 +13,8 @@
 #include <unordered_map>
 
 
-namespace{
+namespace
+{
 
 
 
@@ -37,24 +38,24 @@ namespace{
     u8 currentVolume           = 0;
 
 
-Result mp3::PlayFile(){
+    Result mp3::PlayFile(){
     
-    STDirectory dir("/3ds/PKSM/songs");
-    if (dir.good())
-    {
-        for (size_t i = 0; i < dir.count(); i++)
+         STDirectory dir("/3ds/PKSM/songs");
+        if (dir.good())
         {
-            if (!dir.folder(i))
-            {
-                auto decoder = Decoder::get("/3ds/PKSM/songs/" + dir.item(i));
-                if (decoder && decoder->good())
-                {
+             for (size_t i = 0; i < dir.count(); i++)
+             {
+                  if (!dir.folder(i))
+                 {
+                     auto decoder = Decoder::get("/3ds/PKSM/songs/" + dir.item(i));
+                     if (decoder && decoder->good())
+                     {
                     bgm.emplace_back("/3ds/PKSM/songs/" + dir.item(i));
-                }
-            }
-        }
+                      }
+                  }
+             }
 
-    return 0;
+         return 0;
     
-}
+    }
 }

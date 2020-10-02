@@ -6,5 +6,5 @@
 namespace mp3
 {
   
- Result PlayFile();
+ Result PlayFile(void);
 }
