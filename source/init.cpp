@@ -54,7 +54,7 @@ Result Init::Initialize() {
 	Gui::loadSheet("romfs:/gfx/sprites.t3x", sprites);
 	cfguInit();
         
-    mp3::PlayFile("/3ds/NPI/music/Test/Faint.mp3");
+    mp3::PlayFile();
 
         acInit();
 	amInit();
