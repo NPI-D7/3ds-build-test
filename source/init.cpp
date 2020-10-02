@@ -56,7 +56,7 @@ Result Init::Initialize() {
         
     
 
-        acInit();
+    acInit();
 	amInit();
 	AM_QueryAvailableExternalTitleDatabase(NULL);
 	mcuHwcInit();
@@ -104,7 +104,7 @@ Result Init::MainLoop() {
 
 	
 		
-		//mp3::PlayFile();
+		mp3::PlayFile();
              //   playFile("/3ds/NPI/music/Test/Faint.mp3");
 
 
@@ -138,7 +138,7 @@ Result Init::Exit() {
 	romfsExit();
 
 
-FS_CloseArchive(nand_archive);
+	FS_CloseArchive(nand_archive);
 	FS_CloseArchive(sdmc_archive);
 
 	
