@@ -20,22 +20,17 @@ namespace
 
 
 
-    constexpr size_t BUFFER_SIZE         = 32 * 1024;
-    constexpr size_t NUM_CHANNELS        = 24;
-    constexpr size_t BUFFERS_PER_CHANNEL = 2;
-    s16* bufferMem                       = nullptr;
+   
     std::array<ndspWaveBuf, NUM_CHANNELS * BUFFERS_PER_CHANNEL> buffers;
     std::array<std::unique_ptr<Decoder>, NUM_CHANNELS> decoders;
     // 0 is reserved for the background music
     std::atomic_flag occupiedChannels[NUM_CHANNELS];
-    LightEvent frameEvent;
+  
 
-    std::unordered_map<std::string, std::string> effects; // effect name to file name
+    
     std::vector<std::string> bgm;
     size_t currentSong         = 0;
-    std::atomic<bool> playing  = false;
-    std::atomic<bool> finished = true;
-    u8 currentVolume           = 0;
+
 
 
     Result mp3::PlayFile(){
