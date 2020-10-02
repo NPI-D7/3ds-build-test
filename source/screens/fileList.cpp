@@ -69,7 +69,7 @@ void FileList::Logic(u32 hDown, u32 hHeld, touchPosition touch) {
 	}
 	if (hDown & KEY_A){
 		if (this->Selection == 0){
-			Audio_Init("sdmc:/3ds/NPI/music/Test/Faint.mp3");
+		
 		}
 	}
 
