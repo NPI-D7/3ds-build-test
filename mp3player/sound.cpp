@@ -20,12 +20,6 @@ namespace
 
 
 
-   
-    std::array<ndspWaveBuf, NUM_CHANNELS * BUFFERS_PER_CHANNEL> buffers;
-    std::array<std::unique_ptr<Decoder>, NUM_CHANNELS> decoders;
-    // 0 is reserved for the background music
-    std::atomic_flag occupiedChannels[NUM_CHANNELS];
-  
 
     
     std::vector<std::string> bgm;
