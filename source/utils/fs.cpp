@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "common.hpp"
 
 #include "fs.h"
 #include "utils.h"
